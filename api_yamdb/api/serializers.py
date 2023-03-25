@@ -5,7 +5,6 @@ from django.core.mail import send_mail
 from django.http import Http404
 from rest_framework import serializers
 from rest_framework.generics import get_object_or_404
-
 from reviews.models import Category, Comment, Genre, Review, Title, User
 
 
