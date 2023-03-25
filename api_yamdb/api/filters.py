@@ -1,7 +1,6 @@
-
-
 import django_filters
 from django_filters.rest_framework import filters
+
 from reviews.models import Title
 
 

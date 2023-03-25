@@ -1,5 +1,6 @@
 import random
 import re
+
 from django.core.mail import send_mail
 from django.http import Http404
 from rest_framework import serializers
@@ -61,10 +62,9 @@ class SignupSerializer(serializers.ModelSerializer):
             self.mail(code, email)
             return user
         code = random.randint(1111, 9999)
-        user = User.objects.create(username=username,
-                                   email=email, password=code)
         self.mail(code, email)
-        return user
+        return User.objects.create(username=username,
+                                   email=email, password=code)
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -77,7 +77,6 @@ class UserSerializer(serializers.ModelSerializer):
         )
         lookup_field = 'username'
         read_only_fields = ('password',)
-
 
     def validate_username(self, value):
         pattern = re.compile('^[\\w]{3,}')

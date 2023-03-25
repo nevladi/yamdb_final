@@ -35,7 +35,7 @@ class User(AbstractUser):
         null=True,
         blank=True
     )
-    bio = models.TextField('Биография',null=True, blank=True)
+    bio = models.TextField('Биография', null=True, blank=True)
     role = models.TextField(
         default='user',
         choices=ROLES,
@@ -134,6 +134,7 @@ class Title(models.Model):
                 if isinstance(rating, int)
                 else float(f'{rating:.2f}')
             )
+        return False
 
     def __str__(self):
         return self.name
