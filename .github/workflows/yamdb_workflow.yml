@@ -39,9 +39,9 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
-          context: api_yamdb/
+          context: ./api_yamdb/
           push: true
-          tags: nevladi/api_yamdb_web:latest
+          tags: nevladi/api_yamdb:latest
 
   deploy:
     name: Deploy project to server
