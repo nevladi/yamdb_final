@@ -40,8 +40,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: nevladi/api_yamdb:latest
-
+          tags: nevladi/api_yamdb_web:latest
   deploy:
     name: Deploy project to server
     runs-on: ubuntu-latest
