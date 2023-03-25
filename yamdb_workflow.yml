@@ -41,7 +41,7 @@ jobs:
         with:
           context: ./api_yamdb/
           push: true
-          tags: nevladi/api_yamdb_web:latest
+          tags: nevladi/api_yamdb:latest
 
   deploy:
     name: Deploy project to server
