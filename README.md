@@ -1,5 +1,7 @@
 ![example workflow](https://github.com/nevladi/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
+Проект находится по адресу: http://84.201.139.121/api/v1/
+
 # YaMDb
 ## Описание проекта
 Проект YaMDb собирает отзывы пользователей на произведения. Сами произведения в 
