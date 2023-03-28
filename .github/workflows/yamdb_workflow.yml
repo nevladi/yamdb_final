@@ -47,11 +47,11 @@ jobs:
     name: Deploy project to server
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker
+    if: github.ref == 'refs/heads/master'
     steps:
       - name: executiog remote ssh commands to deploy
         uses: appleboy/ssh-action@master
         with:
-          ref: master
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
